@@ -1,5 +1,5 @@
 import imageTemplate from '../../src/template/image.hbs';
-import apiService from './apiService';
+import apiService from './apiPix';
 import * as basicLightbox from 'basiclightbox';
 import PNotify from 'pnotify/dist/es/PNotify.js';
 
@@ -54,6 +54,7 @@ function pnotifyInfo(images) {
     renderImage(images);
   }
 }
+
 function loadMore(input) {
   apiService
     .apiService(input)
