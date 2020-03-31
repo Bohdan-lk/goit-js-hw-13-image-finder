@@ -41,16 +41,16 @@ function scroll() {
       top: +window.scrollY + 700,
       behavior: 'smooth',
     });
-  }, 500);
+  }, 400);
 }
 
 function pnotifyInfo(images) {
   if (!images.length) {
     PNotify.defaults.icons = 'material';
     PNotify.error({
-      title: 'No matches found!',
-      text: 'Enter query',
-      delay: 3000,
+      title: 'Nothing found for this request!',
+      text: 'Enter query.',
+      delay: 2000,
     });
   } else {
     renderImage(images);
@@ -89,6 +89,6 @@ function modal(e) {
     );
     instance.show();
   }
-}
 
+}
 
