@@ -10,14 +10,16 @@
 <body>
 <div class="container">
   <form id="search-form">
-    <input type="text"
+    <input autocomplete="off"
            class="input"
+           id="search-input"
            name="query"
-           autocomplete="off"
            placeholder="Search images..."
-           id="search-input">
+           type="text">
+
     <button type="reset"
-            class="search" id="search-btn"></button>
+            class="search" id="search-btn">
+    </button>
   </form>
 
   <ul class="gallery"></ul>
