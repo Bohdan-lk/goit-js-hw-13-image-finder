@@ -2,6 +2,8 @@ import imageTemplate from '../../src/template/image.hbs';
 import apiService from './apiPix';
 import * as basicLightbox from 'basiclightbox';
 import PNotify from 'pnotify/dist/es/PNotify.js';
+import PNotifyStyleMaterial from 'pnotify/dist/es/PNotifyStyleMaterial.js';
+import InfiniteScroll from 'infinite-scroll';
 
 const refs = {
   inputSearch: document.querySelector('input'),
@@ -46,7 +48,7 @@ function pnotifyInfo(images) {
   if (!images.length) {
     PNotify.defaults.icons = 'material';
     PNotify.error({
-      title: 'Oh No!',
+      title: 'No matches found!',
       text: 'Enter query',
       delay: 3000,
     });
