@@ -75,7 +75,7 @@ function apiServices(input) {
     .catch(error => console.log(error));
 }
 
-// Modal
+
 function modal(e) {
   if (!e.target.dataset.source) {
     return;

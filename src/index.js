@@ -1,6 +1,6 @@
 import './styles.css';
 import './js/app';
-import './js/button';
+import './js/searchBtn';
 import './js/apiPix';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import 'pnotify/dist/PNotifyBrightTheme.css';
