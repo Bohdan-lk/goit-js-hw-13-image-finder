@@ -45,15 +45,15 @@ function scroll() {
 }
 
 function pnotifyInfo(images) {
-  if (!images.length) {
+  if (images.length) {
+    renderImage(images);
+  } else {
     PNotify.defaults.icons = 'material';
     PNotify.error({
       title: 'Nothing found for this request!',
       text: 'Enter query.',
       delay: 2000,
     });
-  } else {
-    renderImage(images);
   }
 }
 
@@ -68,26 +68,26 @@ function clearMarkup() {
   refs.ul.innerHTML = '';
 }
 
-function apiServices(input) {
+function apiServices (input) {
   apiService
-    .apiService(input)
-    .then(images => {
-      pnotifyInfo(images);
+    .apiService (input)
+    .then (images => {
+      pnotifyInfo (images);
     })
-    .catch(error => console.log(error));
+    .catch (error => console.log (error));
 }
 
 
-function modal(e) {
+function modal (e) {
   if (!e.target.dataset.source) {
     return;
   } else {
-    const instance = basicLightbox.create(
+    const instance = basicLightbox.create (
       `
     <img src=${e.target.dataset.source} width="800" height="600">
 `,
     );
-    instance.show();
+    instance.show ();
   }
 
 }
